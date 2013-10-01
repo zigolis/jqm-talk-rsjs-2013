@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>RSJS - jQuery Mobile</title>
+
+		<meta name="description" content="RSJS - Palestra sobre jQuery Mobile">
+		<meta name="author" content="Gabriel Zigolis">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/reveal.settings.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+			<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+<!--&lt; &gt;-->
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1 class="logo">&nbsp;</h1>
+					<p>
+						<small>Por: <a href="http://zigolis.com">Gabriel Zigolis</a> / <a href="http://twitter.com/zigolis">@zigolis</a></small>
+					</p>
+				</section>
+
+				<section>
+					<header class="breadcrumb"><p>» Gabriel Zigolis </p></header>
+
+					<h3 class="question">Quem é?</h3>
+					
+					<ul>
+						<li>Front-End Developer há 8 anos</li>
+						<li>Instrutor de desenvolvimento web há 6 anos</li>
+						<li>globo.com, grupo RBS, IBM, GoodCard, SelulloidAg...</li>
+						<li><a href="mailto:gabriel.zigolis@gmail.com">gabriel.zigolis@gmail.com</a></li>
+						<li><a href="http://www.zigolis.com">http://zigolis.com</a></li>
+					</ul>
+				</section>
+
+				<section data-state="soothe">
+					<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+					<h3 class="question">O que é?</h3>
+					<p class="question">É um framework para desenvolvimento web, otimizado para interação por toque, capaz de criar sistemas de interface unificados, baseados em HTML5 e CSS3 para as principais plataformas móveis, construído sobre o jQuery e jQuery UI.</p>
+				</section>
+
+				<section>
+					<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+					<h3 class="question">Como eu uso isso?</h3>
+					<ul>
+						<li>Guia de introdução</li>
+						<li><a href="http://view.jquerymobile.com/1.3.0/docs/intro/">http://view.jquerymobile.com/1.3.0/docs/intro/</a></li>
+						<li>Documentação</li>
+						<li><a href="http://view.jquerymobile.com/1.3.0/">http://view.jquerymobile.com/1.3.0/</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+					<h3 class="question">Iniciando...</h3>
+					<ul>
+						<li><a href="http://jquerymobile.com/download/">Baixe os arquivos ou use através do CDN</a></li>
+						<li>Adicione o Doctype de HTML5: &lsaquo;!DOCTYPE html&rsaquo;</li>
+						<li>Adicione a meta tag (viewport)</li>
+						<li>Inclua o jQuery, jQuery Mobile e os arquivos JavaScript</li>
+						<li>Inclua o CSS do jQuery Mobile</li>
+					</ul>
+				</section>
+
+				<section>
+					<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+					<h3 class="question">Código</h3>
+
+					<pre><code contenteditable style="font-size:14px;margin-top:20px">&lt;!DOCTYPE html> 
+&lt;html>
+    &lt;head>
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1">	
+        &lt;title>jQuery Mobile&lt;/title>
+        &lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+        &lt;script src="http://code.jquery.com/jquery-1.9.1.min.js">&lt;/script>
+        &lt;script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js">&lt;/script>
+    &lt;/head>
+    &lt;body>
+
+    &lt;/body>
+&lt;/&lt;html>
+					</code></pre>
+				</section>
+
+				<section>
+					<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+					<h3 class="question">Como funciona?</h3>
+					<ul>
+						<li>jQm trabalha com o conceito de páginas</li>
+						<li>Em cada página temos "divs" com o atributo data-role</li>
+						<li>Definindo assim header, content e footer</li>
+						<li>Div com atributo data-role? &lt;div data-role="header"></li>
+						<li>Isso mesmo, HTML5 permite qualquer atributo!</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Código</h3>
+						<pre><code contenteditable style="font-size:15px;margin-top:20px">
+&lt;div data-role="page">
+    &lt;div data-role="header">
+        &lt;h1>RSJS 2013&lt;/h1>
+    &lt;/div>
+
+    &lt;div data-role="content">
+        &lt;p>Segunda edição do maior evento de Javascript do sul do país.&lt;/p>
+        &lt;p>Confira o sucesso da primeira edição e garanta o quanto antes a sua inscrição.&lt;/p>
+    &lt;/div>
+&lt;/div>
+						</code></pre>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">E a mágica acontece</h3>
+						<iframe src="exemplos/01/index.html" width="320px" height="380px"></iframe>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Em outros breakpoints</h3>
+						<iframe src="exemplos/01/index.html" width="800px" height="350px"></iframe>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">E para customizar?</h3>
+						<p class="question">É extramamente simples adaptar ao estilo do seu projeto, com poucas linhas de css e algumas classes no HTML.</p>
+						<!--iframe width="333" height="250" src="http://www.youtube.com/embed/DMWFqbJtQlk" frameborder="0" allowfullscreen></iframe-->
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Código</h3>
+						<pre><code contenteditable style="font-size:14px;margin-top:20px">.ui-page {
+	background: #f9f9f9;
+	font-family: 'PT Sans',sans-serif;
+}
+.ui-header {
+	background: #f9f9f9;
+	border-top: 5px solid #A51D1D;
+}
+.logo {
+	background: url(../../img/logo.png);
+	font: 0/0 arial;
+	height: 75px;
+	width: 58px;
+}
+.ui-footer {
+	background: #A51D1D;
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">E sua aplicação fica assim</h3>
+						<iframe src="exemplos/02/index.html" width="320px" height="380px"></iframe>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Widgets</h3>
+						<p class="question">De forma simples, prática e rápida podemos enriquecer nossa aplicação com o uso dos Widgets.</p>
+
+						<ul>
+							<li>Caixas de diálogo</li>
+							<li>Elementos de formulário</li>
+							<li>Navbar</li>
+							<li>Transições</li>
+							<li>...</li>
+						</ul>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Código - Navbar</h3>
+						<pre><code contenteditable style="font-size:15px;margin-top:20px">
+&lt;div data-role="navbar" data-grid="d">
+    &lt;ul>
+        &lt;li>&lt;a href="#" class="ui-btn-active">sobre&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#">inscrições&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#">programação&lt;/a>&lt;/li>
+    &lt;/ul>
+&lt;/div>
+						</code></pre>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">E lá vem ele...</h3>
+						<iframe src="exemplos/03/index.html" width="320px" height="380px"></iframe>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Widgets</h3>
+						<p class="question">E navegação, como funciona se eu precisar de modais, alertas ou simples links?</p>
+						<p class="question">Ah! E como eu faço a mágica das animações?</p>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Código - Navegação</h3>
+						<pre><code contenteditable style="font-size:15px;margin-top:20px">
+&lt;div data-role="navbar" data-grid="d">
+    &lt;ul>
+        &lt;li>&lt;a href="index.html" class="ui-btn-active">sobre&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="inscricoes.html" data-rel="dialog" data-transition="pop">inscrições&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="programacao.html" data-transition="flow">programação&lt;/a>&lt;/li>
+    &lt;/ul>
+&lt;/div>
+						</code></pre>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">E lá vem ele...</h3>
+						<iframe src="exemplos/04/index.html" width="320px" height="380px"></iframe>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Widgets</h3>
+						<p class="question">Beleza, mas agora eu preciso de um formulário de contato, e ai?</p>
+						<p class="question">E outra, eu gostaria que ele aparecesse diferente na tela...</p>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Código - Painel</h3>
+						<pre><code contenteditable style="font-size:15px;margin-top:20px">&lt;div data-role="page">
+    &lt;div data-role="panel" id="contato">
+        /*Form*/
+    &lt;/div>
+
+    &lt;!-- header -->
+    &lt;!-- content -->
+    &lt;!-- footer -->
+&lt;/div>
+						</code></pre>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Código - Form</h3>
+						<pre><code contenteditable style="font-size:15px;margin-top:20px;line-height:20px">&lt;form>
+    &lt;label for="nome">Nome:&lt;/label>
+    &lt;input type="text" name="nome" id="nome" />
+
+    &lt;label for="email">Email:&lt;/label>
+    &lt;input type="email" name="email" id="email" data-clear-btn="true" />
+
+    &lt;label for="select">Motivo do contato:&lt;/label>
+    &lt;select name="select" id="select" data-native-menu="false">
+        &lt;option>Selecione uma opção&lt;/option>
+        &lt;option value="1">Dúvidas&lt;/option>
+        &lt;option value="2">Sugestões&lt;/option>
+    &lt;/select>
+
+    &lt;label for="textarea">Escreva sua mensagem:&lt;/label>
+    &lt;textarea cols="40" rows="8" name="textarea" id="textarea">&lt;/textarea>
+
+    &lt;input type="submit" value="Enviar">
+&lt;/form>
+						</code></pre>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">E dessa vez o que temos...</h3>
+						<iframe src="exemplos/05/index.html" width="320px" height="380px"></iframe>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Widgets</h3>
+						<p class="question">Bacana, e agora mais alguma maneira de "esconder" o conteúdo?</p>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Código - Collapsible</h3>
+						<pre><code contenteditable style="font-size:15px;margin-top:20px">&lt;div data-role="page">
+    &lt;div data-role="content">
+        &lt;p class="desc-evento">&lt;em>Programação!&lt;/em>&lt;/p>
+
+        &lt;div data-role="collapsible-set">
+            &lt;div data-role="collapsible" data-theme="c" data-content-theme="d">
+                &lt;h4>8h30&lt;/h4>
+                &lt;p>Checkin&lt;/p>
+            &lt;/div>
+
+            &lt;div data-role="collapsible" data-theme="c" data-content-theme="d">
+                &lt;h4>9h00&lt;/h4>
+                &lt;p>Dissecando sua aplicação com Chrome Dev Tools&lt;/p>
+            &lt;/div>
+        &lt;/div>    
+    &lt;/div>
+&lt;/div>
+						</code></pre>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Simples e direto...</h3>
+						<iframe src="exemplos/06/index.html" width="320px" height="380px"></iframe>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">JavaScript</h3>
+						<p class="question">E o JavaScript, onde e como a gente utiliza?</p>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Código - Chamada</h3>
+						<pre><code contenteditable style="font-size:15px;margin-top:20px">
+    &lt;script src="../jquery-1.9.1.min.js">&lt;/script>
+    &lt;script src="jquery.configs.js">&lt;/script>
+    &lt;script src="../mobile/1.3.0/jquery.mobile-1.3.0.min.js">&lt;/script>
+						</code></pre>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Código - jquery.configs.js</h3>
+						<pre><code contenteditable style="font-size:15px;margin-top:20px">
+$(document).on("mobileinit", function(){
+	
+	$.mobile.defaultPageTransition = "flip";
+
+});
+						</code></pre>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">E o padrão de navegação do sistema muda...</h3>
+						<iframe src="exemplos/07/index.html" width="320px" height="380px"></iframe>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">JavaScript</h3>
+						<p class="question">Os eventos são outro ponto simples de trabalhar e modificar na aplicação.</p>
+						
+						<ul>
+							<li>Touch</li>
+							<li>Orientation</li>
+							<li>Scroll</li>
+							<li>...</li>
+						</ul>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Código - jquery.events.js</h3>
+						<pre><code contenteditable style="font-size:15px;margin-top:20px">
+$(function(){
+	$(window).bind("orientationchange", function(e){
+		if( e.orientation == "portrait" ){
+			$("#landscape").fadeOut(500, function(){
+				$("#portrait").fadeIn(300);
+			});
+		} else {
+			$("#portrait").fadeOut(500, function(){
+				$("#landscape").fadeIn(300);
+			});
+		}
+	})
+})
+						</code></pre>
+					</section>
+
+					<section>
+						<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+						<h3 class="question">Código - GRID</h3>
+						<pre><code contenteditable style="font-size:15px;margin-top:20px">
+&lt;div data-role="content">
+	&lt;div class="ui-grid-a" id="portrait">
+		&lt;div class="ui-block-a box">Orientation&lt;/div>
+		&lt;div class="ui-block-b box">Portrait&lt;/div>
+	&lt;/div>
+
+	&lt;div class="ui-grid-c" id="landscape">
+		&lt;div class="ui-block-a box">Orientation&lt;/div>
+		&lt;div class="ui-block-b box">Landscape&lt;/div>
+		&lt;div class="ui-block-c box">Orientation&lt;/div>
+		&lt;div class="ui-block-d box">Landscape&lt;/div>
+	&lt;/div>
+&lt;/div>
+				</code></pre>
+			</section>
+
+			<section>
+				<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+				<h3 class="question">Olha agora a aplicação em landscape...</h3>
+				<iframe src="exemplos/08/index.html" width="720px" height="380px"></iframe>
+			</section>
+
+			<section>
+				<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+				<h3 class="question">Abra a sua mente</h3>
+				<p class="question">Com a manipulação dos eventos podemos por exemplo carregar um JSON com mais dados para uma orientation.</p>
+				<p class="question">Ou para um breakpoint específico.</p>
+			</section>
+
+		</section>
+
+		<section>
+			<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+			<h3 class="question">Quem está usando o jQm?</h3>
+			<ul>
+				<li><a href="http://m.fiat.es">http://m.fiat.es</a></li>
+				<li><a href="http://m.rolex.com/en/">http://m.rolex.com/en/</a></li>
+				<li><a href="http://mobile.united.com">http://mobile.united.com</a></li>
+				<li><a href="http://m.sears.com">http://m.sears.com</a></li>
+				<li><a href="http://events.jquery.org/m/">http://events.jquery.org/m/</a></li>
+				<li><a href="http://www.jqmgallery.com">http://www.jqmgallery.com</a></li>
+			</ul>
+		</section>
+
+		<section data-state="alert">
+			<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+			<h3 class="question" style="margin-top:200px;text-align:center">Dúvidas? Sugestões ou Doações...</h3>
+		</section>
+
+		<section data-state="blackout">
+			<header class="breadcrumb"><p>» jQuery Mobile</p></header>
+
+			<h3 class="question" style="margin-top:100px;text-align:center">Obrigado!!!</h3>
+			<p>Material disponível em:</p>
+			<p><a href="http://www.zigolis.com.br/rsjs/">www.zigolis.com.br/rsjs/</a></p>
+		</section>
+	</div>
+</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,47 @@
+.ui-page {
+	background: #f9f9f9;
+	font-family: 'PT Sans',sans-serif !important;
+}
+
+.ui-header {
+	background: #f9f9f9;
+	border-bottom: none;
+	border-top: 5px solid #A51D1D;
+}
+
+.logo {
+	background: url(../../img/logo.png);
+	font: 0/0 arial !important;
+	height: 75px;
+	margin: 10px auto !important;
+	width: 58px;
+}
+
+.desc-evento {
+	text-align: center;
+}
+
+.ui-footer {
+	background: #A51D1D;
+	border-top: none;
+	font: normal 13px 'PT Sans', 'Trebuchet Ms';
+}
+
+.ui-btn-active {
+	background: #A51D1D;
+	background: linear-gradient(#A51D1D, #D50E0E) repeat scroll 0 0 #A51D1D !important;
+}
+
+.dialog {
+	background: #A51D1D;
+}
+
+.box {
+	background: #fff;
+	border: 2px solid #A51D1D;
+	padding: 20px;
+}
+
+#portrait {
+	display: none;
+}

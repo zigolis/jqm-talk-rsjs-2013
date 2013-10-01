@@ -1,0 +1,8 @@
+.reveal pre {
+	width: 100%;
+}
+
+iframe {
+	border: 5px solid #ccc !important;
+	box-shadow: 3px 5px 5px #333;
+}
